@@ -22,8 +22,9 @@
 */
 
 //CODE HERE
-let greetUser = username => return `Welcome back ${username}`
-
+let greetUser = username => {
+    return `Welcome back ${username}`
+}
 console.log(greetUser('andrew'))
 
 
@@ -53,7 +54,16 @@ console.log(greetUser('andrew'))
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-
+let canWeDeliver = zipCode => {
+    for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+        if(deliveryAreaZipCodes[i] === zipCode){
+            return 'area is eligible for delivery'
+        }else{
+            return 'area not eligible for delivery'
+        }
+    }
+}
+console.log(canWeDeliver(33333))
 
 
 /* 
@@ -73,8 +83,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
-
+// CODE HERE\
+let canWeDeliverTwo = zipCode => {
+    if(deliveryAreaZipCodes.includes(zipCode)){
+        return 'area is eligible for delivery'
+    }else{
+        return 'area not eligible for delivery'
+    }
+}
+console.log(canWeDeliverTwo(85205))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -110,9 +127,11 @@ const deals = [
 */
 
 //CODE HERE
-
-
-
+    
+let newDeals = deals.forEach(deals => {
+       deals.title.replace('15', '10')
+    })
+console.log(newDeals)
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -127,3 +146,7 @@ const deals = [
 */
 
 //CODE HERE
+let trimmedDeals = deals.forEach(deals => {
+    return deals.desc.trim()
+})
+console.log(trimmedDeals)

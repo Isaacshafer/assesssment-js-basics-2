@@ -31,6 +31,14 @@
 */
 
 //CODE HERE
+let pizza = {
+    name:'pepperoni pizza',
+    price: 20,
+    category: 'bread',
+    popularity: 1,
+    rating: 9.5,
+    tags:['most popular', 'under $30'],
+}
 
 
 
@@ -43,6 +51,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -53,6 +62,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -63,8 +73,8 @@
 */
 
 //CODE HERE
-
-
+let {price} = pizza
+console.log(price)
 /*
     Fourth, and last, destructure the category
     property.
@@ -73,7 +83,8 @@
 */
 
 //CODE HERE
-
+let {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,6 +99,37 @@
 */
 
 //CODE HERE
+let foodArr = [
+    {name:'cheeses pizza',
+price: 15,
+category: 'bread',
+popularity: 3,
+rating: 8,
+tags:['kids', 'under $30'],},
+ {name:'caesar salad',
+price: 12,
+category: 'salad',
+popularity: 8,
+rating: 7,
+tags:['gluten free', 'under $30'],},
+ {name:'bread sticks',
+price: 10,
+category: 'bread',
+popularity: 9,
+rating: 7.2,
+tags:['kids', 'under $30'],},
+ {name:'marinara sauce',
+price: 2,
+category: 'sauce',
+popularity: 15,
+rating: 5.5,
+tags:['dipping sauce', 'under $30'],},
+ {name:'brownies',
+price: 9,
+category: 'dessert',
+popularity: 10,
+rating: 7.9,
+tags:['most popular', 'under $30'],}]
 
 
 
@@ -104,6 +146,24 @@
 */
 
 //CODE HERE
+
+let searchTag = (arr, tag) => {
+    if(arr["tags"].includes(tag)){
+        return arr
+    }
+}
+
+let hasTag = (arr, tag, callback) => {
+    arr.forEach(() => callback(arr, tag))
+}
+
+
+
+
+
+
+
+hasTag(foodArr, 'kids', searchTag)
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 

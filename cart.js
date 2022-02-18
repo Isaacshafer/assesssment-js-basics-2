@@ -35,8 +35,9 @@ const cart = [
 
 //CODE HERE
 
+let sum = cart.reduce((a, c)=> a + c.price, 0)
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+console.log(sum)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,7 +55,9 @@ const cart = [
 */
 
 //CODE HERE
-
+calcFinalPrice = (total, tax, coupon){
+    return total * (1 + tax) - coupon
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,6 +82,13 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    a restaurant would need:
+     name as a string
+     order total as a number
+     payment method as a string
+     items as an array or strings
+
+
 
 */
 
@@ -88,3 +98,9 @@ const cart = [
 */
 
 //CODE HERE
+let customer1 = {
+    name: 'Bob',
+    orderTotal: 25,
+    paymentMethod: 'credit card',
+    items: ['pizza', 'salad']
+}
