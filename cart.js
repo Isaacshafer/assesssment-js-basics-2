@@ -55,7 +55,7 @@ console.log(sum)
 */
 
 //CODE HERE
-calcFinalPrice = (total, tax, coupon){
+calcFinalPrice = (total, tax, coupon) =>{
     return total * (1 + tax) - coupon
 }
 

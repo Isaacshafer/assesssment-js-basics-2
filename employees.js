@@ -139,11 +139,12 @@ let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', ['C
 */
 
 //CODE HERE 
+manager.addEmployee('Coach')
 
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
     that an employee was added.
 */
-
+manager.getEmployees()
 //CODE HERE
