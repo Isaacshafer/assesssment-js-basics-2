@@ -128,10 +128,8 @@ const deals = [
 
 //CODE HERE
     
-let newDeals = deals.forEach(deals => {
-       deals.title.replace('15', '10')
-    })
-console.log(newDeals)
+deals[0].title = deals[0].title.replace(5, 0)
+console.log(deals)
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -146,7 +144,5 @@ console.log(newDeals)
 */
 
 //CODE HERE
-let trimmedDeals = deals.forEach(deals => {
-    return deals.desc.trim()
-})
-console.log(trimmedDeals)
+deals[1].desc = deals[1].desc.trim().replace('March', 'April')
+console.log(deals)
